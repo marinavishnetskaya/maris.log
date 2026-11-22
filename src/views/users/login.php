@@ -1,5 +1,7 @@
 <div class="container">
     <form class="form" action="users/login" method="POST">
+        <?= csrf_field() ?>
+
         <h1>Вход</h1>
 
         <?php if (!empty($error)): ?>

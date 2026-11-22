@@ -1,7 +1,7 @@
 <div class="container">
     <form class="form form-wide" action="articles/add" method="POST" enctype="multipart/form-data">
+        <?= csrf_field() ?>
         <h1>Новая статья</h1>
-
         <?php if (!empty($error)): ?>
             <p class="error"><?= e($error) ?></p>
         <?php endif; ?>
@@ -21,3 +21,4 @@
         </div>
     </form>
 </div>
+
