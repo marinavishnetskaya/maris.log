@@ -1,0 +1,326 @@
+/* Общие стили сайта mari$ bo$$. Главный цвет меняется в одном месте: --accent */
+:root {
+    --accent: #d6336c;
+    --accent-dark: #b02a59;
+    --text: #222;
+    --gray: #777;
+    --line: #ddd;
+    --light: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+a {
+    color: var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.muted {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* ---------- шапка ---------- */
+.header {
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 30px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: var(--accent);
+}
+
+.nav-user {
+    color: var(--gray);
+}
+
+/* ---------- главная ---------- */
+.hero {
+    background: var(--light);
+    padding: 40px 0;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+}
+
+.hero p {
+    margin: 0;
+}
+
+/* ---------- кнопки ---------- */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+.btn-light {
+    background: #fff;
+    color: var(--text);
+    border-color: var(--line);
+}
+
+.btn-light:hover {
+    background: var(--light);
+    border-color: var(--line);
+}
+
+.btn-danger {
+    background: #fff;
+    color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+    color: #fff;
+}
+
+/* ---------- список статей ---------- */
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    border: 1px solid var(--line);
+}
+
+.card-img {
+    width: 220px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px 20px;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.card-body h3 {
+    margin: 0 0 5px;
+}
+
+/* ---------- одна статья ---------- */
+.article-img {
+    display: block;
+    max-height: 400px;
+    margin: 20px 0;
+}
+
+.article-text {
+    overflow-wrap: break-word;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.actions form {
+    margin: 0;
+}
+
+/* ---------- формы ---------- */
+.form {
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--line);
+}
+
+.form-wide {
+    max-width: 700px;
+}
+
+.form h1 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.form label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--line);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form input:focus,
+.form textarea:focus,
+.search-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form > .btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .actions .btn {
+    width: auto;
+    margin: 0;
+}
+
+.edit-img {
+    display: block;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.error {
+    padding: 10px;
+    margin: 0 0 10px;
+    background: #fdecea;
+    border: 1px solid #f5c2c0;
+    color: #a12622;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--line);
+    font-size: 15px;
+}
+
+/* ---------- подвал ---------- */
+.footer {
+    border-top: 1px solid var(--line);
+    background: var(--light);
+    padding: 20px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ---------- телефон ---------- */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 180px;
+    }
+}

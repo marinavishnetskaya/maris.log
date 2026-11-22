@@ -1,0 +1,12 @@
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Всё, что не является реальным файлом или папкой, отправляем в index.php.
+# Работает и в корне домена, и в подпапке (localhost/saktaganova.log-main/)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+</IfModule>
